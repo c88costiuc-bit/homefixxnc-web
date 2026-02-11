@@ -27,7 +27,7 @@ export default function Home() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-              Reliable handyman & home repair in Pittsboro, Siler City, and the Triangle
+              rex handyman & home repair in Pittsboro, Siler City, and the Triangle
             </h1>
             <p className="mt-4 text-lg text-zinc-700">
               Small fixes, punch lists, light carpentry, drywall, trim, doors, and more.
