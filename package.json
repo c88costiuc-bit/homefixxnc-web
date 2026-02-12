@@ -1,8 +1,14 @@
 {
   "name": "web0host-platform",
-  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.29.3",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "format": "prettier -w ."
+  },
   "devDependencies": {
     "eslint": "^10.0.0",
     "prettier": "^3.8.1",
