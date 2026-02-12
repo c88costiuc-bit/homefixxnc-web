@@ -10,12 +10,9 @@
     "format": "prettier -w ."
   },
   "devDependencies": {
-    "eslint": "^10.0.0",
-    "prettier": "^3.8.1",
-    "turbo": "^2.8.7",
-    "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "zod": "^3.25.76"
+    "turbo": "2.8.7",
+    "typescript": "5.9.3",
+    "eslint": "10.0.0",
+    "prettier": "3.8.1"
   }
 }

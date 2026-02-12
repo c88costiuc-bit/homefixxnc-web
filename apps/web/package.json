@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@web0host/deploy-mark": "workspace:*",
+    "@web0host/env": "workspace:*",
     "@web0host/site-config": "workspace:*",
     "next": "16.1.6",
     "react": "19.2.3",
