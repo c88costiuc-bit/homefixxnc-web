@@ -27,5 +27,33 @@ jobs:
       - name: Build web
         run: pnpm -C apps/web build
 
-      - name: Verify Deploy Mark
-        run: ./scripts/verify-deploy-mark.sh
+      - name: Start web and verify Deploy Mark
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "→ Starting Next on :3000"
+          (cd apps/web && pnpm start -p 3000 > /tmp/next.log 2>&1 & echo $! > /tmp/next.pid)
+
+          echo "→ Waiting for http://localhost:3000"
+          for i in {1..45}; do
+            if curl -fsS http://localhost:3000 >/dev/null; then
+              echo "✓ Server is up"
+              break
+            fi
+            sleep 1
+          done
+
+          # If still not up, dump logs and fail early
+          if ! curl -fsS http://localhost:3000 >/dev/null; then
+            echo "✗ Server did not start in time"
+            echo "---- next log ----"
+            tail -n 200 /tmp/next.log || true
+            exit 1
+          fi
+
+          echo "→ Verifying Deploy Mark"
+          ./scripts/verify-deploy-mark.sh
+
+          echo "→ Stopping server"
+          kill "$(cat /tmp/next.pid)" || true
