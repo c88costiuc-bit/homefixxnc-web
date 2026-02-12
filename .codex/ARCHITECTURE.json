@@ -1,0 +1,23 @@
+{
+  "workspace": "web0host-platform",
+  "apps": {
+    "web": {
+      "path": "apps/web",
+      "framework": "nextjs",
+      "entry": "apps/web/src/app/layout.tsx",
+      "env": "@web0host/env",
+      "deployMark": "@web0host/deploy-mark"
+    }
+  },
+  "packages": {
+    "@web0host/env": "packages/env",
+    "@web0host/deploy-mark": "packages/deploy-mark",
+    "@web0host/site-config": "packages/site-config"
+  },
+  "conventions": {
+    "envSchema": "packages/env/src/index.ts",
+    "noHeavyDepsWithoutAsk": true,
+    "workspaceManager": "pnpm",
+    "taskRunner": "turbo"
+  }
+}
