@@ -59,6 +59,7 @@ export default function Home() {
             Documentation
           </a>
         </div>
+        <p className="hidden">DEPLOY_MARK: {new Date().toISOString()}</p>
       </main>
     </div>
   );
