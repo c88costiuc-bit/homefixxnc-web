@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "predev": "node scripts/set-deploy-ts.mjs",
+    "prebuild": "node scripts/set-deploy-ts.mjs"
   },
   "dependencies": {
     "@web0host/deploy-mark": "workspace:*",
+    "@web0host/site-config": "workspace:*",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"

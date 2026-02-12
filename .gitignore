@@ -3,29 +3,29 @@ node_modules
 .pnpm
 .pnpm-store
 
-# pnpm logs/state
-pnpm-debug.log*
+# pnpm / npm / yarn logs & state
+.pnpm-debug.log*
 .pnpm-workspace-state-v1.json
-
-# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 *.log
 
+# turbo
+.turbo
+
 # env
 .env
 .env.*
-.env*
+.env.local
 
-# build outputs
+# Next.js / builds
 .next
 dist
 build
 out
-.turbo
 
-# OS/editor
+# OS / editor
 .DS_Store
 .idea
 .vscode

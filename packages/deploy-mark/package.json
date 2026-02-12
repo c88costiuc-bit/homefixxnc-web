@@ -11,5 +11,8 @@
   "peerDependencies": {
     "react": "^19",
     "react-dom": "^19"
+  },
+  "dependencies": {
+    "@web0host/env": "workspace:*"
   }
 }

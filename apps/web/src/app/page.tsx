@@ -69,9 +69,8 @@ export default function Home() {
         </div>
 
         {/* Invisible deploy verification marker */}
-        <p className="hidden">
-  DEPLOY_MARK: {new Date().toISOString()} — ENV: {process.env.NODE_ENV}
-</p>
+        <div className="hidden">
+        </div>
       </main>
     </div>
   );
